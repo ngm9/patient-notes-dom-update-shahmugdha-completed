@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Portal - Patient Notes</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 16px;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      max-width: 640px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 16px;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .field-group {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .field-group input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+    }
+
+    .field-group button {
+      padding: 8px 16px;
+      border-radius: 4px;
+      border: none;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .field-group button:disabled {
+      background-color: #9ca3af;
+      cursor: default;
+    }
+
+    #errorDiv {
+      min-height: 20px;
+      font-size: 13px;
+      color: #b91c1c;
+      margin-bottom: 8px;
+    }
+
+    #notes {
+      list-style: disc;
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    #notes li {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Patient Notes</h1>
+    <div class="field-group">
+      <input id="note" type="text" placeholder="Type a patient note" autocomplete="off" />
+      <button id="addNoteButton" type="button">Add Note</button>
+    </div>
+    <div id="errorDiv"></div>
+    <ul id="notes"></ul>
+  </div>
+
+  <script src="src/app.js"></script>
+</body>
+</html>
